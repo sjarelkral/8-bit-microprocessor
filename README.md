@@ -1,11 +1,11 @@
 # 8-Bit Microprocessor
-* Project Overview
-* Microprocessor Design
-    * Data Path
-    * Instruction Set Architecture
-        * Formats of the entire instruction set
-        * Control Signal Table
-    * Interface of Microprocessor components
+* [Project Overview]()
+* [Microprocessor Design]()
+    * [Data Path]()
+    * [Instruction Set Architecture]()
+        * [Formats of the entire instruction set]()
+        * [Control Signal Table]()
+    * [Interface of Microprocessor components]()
 * [Example test set: Input/Output](https://github.com/sjarelkral/Microprocessor/blob/master/README.md#example-test-set-inputoutput)
 * [Test Environment](https://github.com/sjarelkral/Microprocessor/blob/master/README.md#test-environment)
 * [Project Grading](https://github.com/sjarelkral/Microprocessor/blob/master/README.md#project-grading)
