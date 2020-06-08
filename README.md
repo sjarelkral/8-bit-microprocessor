@@ -8,7 +8,7 @@
     * Interface of Microprocessor components
 * Example test set: Input/Output
 * Test Environment
-* Project Grading
+* [Project Grading](https://github.com/sjarelkral/Microprocessor/blob/master/README.md#project-grading)
 
 ## Project Overview
 ## Microprocessor Design
