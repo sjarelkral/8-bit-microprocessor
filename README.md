@@ -15,7 +15,7 @@
 * Specifications:
    * 8-bit Microprocessor
    * Instruction size : 8-bit
-   * Type of instructions : 4 (add, load, store, jump)
+   * Type of instructions : 4 (`add`, `load`, `store`, `jump`)
    * Register size : 8-bit
    * Number of registers : 4
  * Input : Instruction codes from external memory (IMEM Module)
