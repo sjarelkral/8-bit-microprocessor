@@ -95,12 +95,12 @@ module Microprocessor(
    assign ReadData1 = (ReadRegister1 == 2'd0) ? GPR[0]:
                       (ReadRegister1 == 2'd1) ? GPR[1]:
                       (ReadRegister1 == 2'd2) ? GPR[2]:
-                      (ReadRegister1 == 2'd3) ? GPR[3];
+							 GPR[3];
 
     assign ReadData2 = (ReadRegister2 == 2'd0) ? GPR[0]:
                       (ReadRegister2 == 2'd1) ? GPR[1]:
                       (ReadRegister2 == 2'd2) ? GPR[2]:
-                      (ReadRegister2 == 2'd3) ? GPR[3];
+							 GPR[3];
 
 
    //Sign extend Instruction [1:0]
@@ -182,6 +182,8 @@ module Microprocessor(
        if (MemWrite) begin
          DataMemory[MemAddress] <= WriteData;
        end
-  end
+		 end
+		 
+		 end
 
 endmodule
