@@ -93,16 +93,6 @@ module Microprocessor(
 
     end
 
-
-
-
-
-
-
-
-
-
-
     reg [7:0]console_buffer;
 
     Console disp1(high_out, console_buffer[7:4]);
@@ -180,52 +170,7 @@ module Microprocessor(
    assign ReadData = DataMemory[MemAddress];
 
    always @ ( posedge clock or posedge reset) begin
-      if (reset)begin
-
-        //Reset PC
-        PC <= 8'd0;
-
-        //Reset registers
-        GPR[0] <= 8'd0;
-        GPR[1] <= 8'd0;
-        GPR[2] <= 8'd0;
-        GPR[3] <= 8'd0;
-
-         //Reinitialize memory;
-         DataMemory[0] <= 8'd0;
-         DataMemory[1] <= 8'd1;
-         DataMemory[2] <= 8'd2;
-         DataMemory[3] <= 8'd3;
-         DataMemory[4] <= 8'd4;
-         DataMemory[5] <= 8'd5;
-         DataMemory[6] <= 8'd6;
-         DataMemory[7] <= 8'd7;
-         DataMemory[8] <= 8'd8;
-         DataMemory[9] <= 8'd9;
-         DataMemory[10] <= 8'd10;
-         DataMemory[11] <= 8'd11;
-         DataMemory[12] <= 8'd12;
-         DataMemory[13] <= 8'd13;
-         DataMemory[14] <= 8'd14;
-         DataMemory[15] <= 8'd15;
-         DataMemory[16] <= 8'd16;
-         DataMemory[17] <= 8'd17;
-         DataMemory[18] <= 8'd18;
-         DataMemory[19] <= 8'd19;
-         DataMemory[20] <= 8'd20;
-         DataMemory[21] <= 8'd21;
-         DataMemory[22] <= 8'd22;
-         DataMemory[23] <= 8'd23;
-         DataMemory[24] <= 8'd24;
-         DataMemory[25] <= 8'd25;
-         DataMemory[26] <= 8'd26;
-         DataMemory[27] <= 8'd27;
-         DataMemory[28] <= 8'd28;
-         DataMemory[29] <= 8'd29;
-         DataMemory[30] <= 8'd30;
-         DataMemory[31] <= 8'd31;
-       end
-
+    
        else begin
 
        IR <= Instruction;
