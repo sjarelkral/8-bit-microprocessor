@@ -56,8 +56,38 @@ module Microprocessor(
       registers <= 32'd0;
 
       //reinitialize memory
-      memory <= 32'd0;
-
+      memory[0] <= 8'd0;
+      memory[1] <= 8'd1;
+      memory[2] <= 8'd2;
+      memory[3] <= 8'd3;
+      memory[4] <= 8'd4;
+      memory[5] <= 8'd5;
+      memory[6] <= 8'd6;
+      memory[7] <= 8'd7;
+      memory[8] <= 8'd8;
+      memory[9] <= 8'd9;
+      memory[10] <= 8'd10;
+      memory[11] <= 8'd11;
+      memory[12] <= 8'd12;
+      memory[13] <= 8'd13;
+      memory[14] <= 8'd14;
+      memory[15] <= 8'd15;
+      memory[16] <= 8'd0;
+      memory[17] <= 8'd-1;
+      memory[18] <= 8'd-2;
+      memory[19] <= 8'd-3;
+      memory[20] <= 8'd-4;
+      memory[21] <= 8'd-5;
+      memory[22] <= 8'd-6;
+      memory[23] <= 8'd-7;
+      memory[24] <= 8'd-8;
+      memory[25] <= 8'd-9;
+      memory[26] <= 8'd-10;
+      memory[27] <= 8'd-11;
+      memory[28] <= 8'd-12;
+      memory[29] <= 8'd-13;
+      memory[30] <= 8'd-14;
+      memory[31] <= 8'd-15;
     end
 
 
