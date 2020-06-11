@@ -50,7 +50,7 @@ module Microprocessor(
     reg [7:0]ir;
     reg [7:0]memory[31:0];
     reg [4:0]rw_num;
-    reg console_buffer;
+    reg [7:0]console_buffer;
 
     //7-segment display
     Console data1(rwd_1, console_buffer[7:4]);
@@ -67,7 +67,7 @@ module Microprocessor(
     assign mem_read = (op == 2'b01);
     assign reg_write = ~op[1];
     assign op = ir[7:6];
-    assign console_buffer = registers[rw_num];
+    assign console_buffer <= registers[rw_num];
 
     always @ (posedge reset or posedge clock) begin
 
@@ -76,7 +76,11 @@ module Microprocessor(
       pc <= 8'd0;
 
       //reset registers
-      registers <= 32'd0;
+      registers[0] <= 8'd0;
+      registers[1] <= 8'd0;
+      registers[2] <= 8'd0;
+      registers[3] <= 8'd0;
+
 
       //reinitialize memory
       memory[0] <= 0;
@@ -132,5 +136,6 @@ module Microprocessor(
         end
 
     end
+	end
 
 endmodule
