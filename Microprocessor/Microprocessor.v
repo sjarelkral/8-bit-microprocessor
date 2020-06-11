@@ -55,6 +55,9 @@ module Microprocessor(
       //reset registers
       registers <= 32'd0;
 
+      //reinitialize memory
+      memory <= 32'd0;
+
     end
 
 
