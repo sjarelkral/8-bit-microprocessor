@@ -20,8 +20,10 @@
    * Number of registers : 4
  * Input : Instruction codes from external memory (IMEM Module)
    * IMEM implemented on a separate FPGA chip and connected using an 8-bit bus.
+   * Additional input: *reset, frequency selectors(0.5Hz, 0.25Hz) using tactile switches*
  * Output: Current value of Reg Write Data, extra optional features e.g 1Hz clock tick LED.
    * **Hexadecimal** on 7-segment displays
+   * Additional output: *PC value & RegWrite register number on 7-segment displays, opcode,operating clock, MemRead, MemWrite, RegWrite on (LED lights)*
  
 ## Microprocessor Design
 
