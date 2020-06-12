@@ -28,21 +28,48 @@ module Microprocessor(
     output [7:0]instruction_address,
     output [6:0]rwd_1,
     output [6:0]rwd_0,
+    input frequency_2;
+    input frequency_4;
     input oscillator,
     input reset,
     input [7:0]instruction
     );
 
-    //Frequency divider : Generate 1 Hz clock (output LED, internal input for components)
+    //Frequency dividers : Generate 1 Hz clock (output LED, internal input for components)
     reg [25:0] delay;
+    reg delay_2;
+    reg delay_4;
     reg sec;
+    reg sec_2;
+    reg sec_4;
+
     always @(posedge oscillator)begin
     	delay  <= (delay == 25000000)?26'd0:(delay+1);
     	if (delay == 26'd0)begin
     		sec <= ~sec;
     	end
     end
-    assign clock = sec;
+
+    always @ ( posedge sec ) begin
+      delay_2  <= ~delay_2;
+      if (~delay_2)begin
+      sec_2 <= ~sec_2;
+      end
+    end
+
+    always @ ( posedge sec_2 ) begin
+      delay_4  <= ~delay_4;
+      if (~delay_4)begin
+      sec_4 <= ~sec_4;
+      end
+    end
+
+
+
+
+    assign clock = frequency_4 ? sec_4 :
+                    frequency_2 ? sec_2 :
+                    sec;
 
     //Storage elements
     reg [7:0]registers[3:0];
@@ -54,8 +81,8 @@ module Microprocessor(
     //buses and wires
     wire [7:0]literal;
 	wire [7:0]display_bus = registers[rw_num];
-	 
-	 
+
+
 	 //7-segment display
     Console data1(rwd_1, display_bus[7:4]);
     Console data0(rwd_0, display_bus[3:0]);
@@ -118,7 +145,7 @@ module Microprocessor(
     end
 
     else begin
-	 
+
         ir = instruction;
 
         if (op == 2'b00) begin
@@ -137,7 +164,7 @@ module Microprocessor(
           pc <= pc+1;
 			 memory[registers[ir[5:4]]+immediate] <= registers[ir[3:2]];
         end
-		  
+
 		  else begin
 			pc <= pc + immediate+1;
 		  end
