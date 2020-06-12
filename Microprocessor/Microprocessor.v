@@ -53,7 +53,7 @@ module Microprocessor(
 
     //buses and wires
     wire [7:0]literal;
-	 wire [7:0]display_bus = registers[rw_num];
+	wire [7:0]display_bus = registers[rw_num];
 	 
 	 
 	 //7-segment display
