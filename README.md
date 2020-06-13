@@ -10,20 +10,18 @@
 * [Test Environment](https://github.com/sjarelkral/Microprocessor/blob/master/README.md#test-environment)
 
 ## Project Overview
-* Implementation of a **simple Microprocessor** in verilog for **FPGA** implementation consisting of an *ALU, a control unit, a system memory, registers*, and so on.
-* An on-board 50MHz clock oscillator is used to create 1Hz clock for the microprocessor.
-* Specifications:
-   * 8-bit Microprocessor
-   * Instruction size : 8-bit
-   * Type of instructions : 4 (`add`, `load`, `store`, `jump`)
-   * Register size : 8-bit
-   * Number of registers : 4
- * Input : Instruction codes from external memory (IMEM Module)
-   * IMEM implemented on a separate FPGA chip and connected using an 8-bit bus.
-   * Additional input: *reset, frequency selectors(0.5Hz, 0.25Hz) using tactile switches*
- * Output: Current value of Reg Write Data, extra optional features e.g 1Hz clock tick LED.
-   * **Hexadecimal** on 7-segment displays
-   * Additional output: *PC value & RegWrite register number on 7-segment displays, opcode,operating clock, MemRead, MemWrite, RegWrite on (LED lights)*
+A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
+* **Clock** : Clocks are generated from on-board 50Hz oscillator. Provided clock speeds are *1Hz (Base clock), 0.5Hz* and *0.25 Hz*. 0.25Hz and 0.5Hz can be selected using frequency selector input.
+* **Specification** : 8-bit Microprocessor
+  * Instruction size : 8-bit
+  * Instruction Set : 4 (add, load, store, jump)
+  * Register size : 8-bit
+  * Number of registers : 4
+  * Memory size : 8-bit word size, 8-bit memory address, 32 memory address locations
+* **Input** : Clocks are generated from on-board 50Hz oscillator. Provided clock speeds are *1Hz (Base clock), 0.5Hz* and *0.25 Hz*. 0.25Hz and 0.5Hz can be selected using frequency selector input.
+
+
+
  
 ## Microprocessor Design
 
