@@ -25,7 +25,7 @@ A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
 * **Output** :
    * Current value of `RegWriteData` in Hexadecimal
    * Register to which `RegWriteData` is written
-   * Value of `pc` i.e *next instruction too be executed*
+   * Value of `pc` i.e *next instruction to be executed*
    * Value of `MemRead`, `MemWrite`, `RegWrite`, `op` and `clock`
 * **Modules** :
    * The ALU, control unit, system memory, frequency divider, pc and registers are condensed into a behavioural description of `Microprocessor` mmodule.
