@@ -11,7 +11,7 @@
 
 ## Project Overview
 A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
-* **Clock** : Clocks are generated from on-board 50Hz oscillator. Provided clock speeds are *1Hz (Base clock), 0.5Hz* and *0.25 Hz*. 0.25Hz and 0.5Hz can be selected using frequency selector input.
+* **Clock** : Clocks are generated from on-board 50Hz oscillator. Provided clock speeds are *1Hz (Base clock), 0.5Hz* and *0.25 Hz*. Frequency selectors are used to switch to the lower frequencies.
 * **Specification** : 8-bit Microprocessor
   * Instruction size : 8-bit
   * Instruction Set : 4 (add, load, store, jump)
