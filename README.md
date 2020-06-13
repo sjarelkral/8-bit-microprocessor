@@ -33,9 +33,11 @@ A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
    * `Console` module is a 4-bit Hexadecimal to 7-segment display converter.
  
 ## Microprocessor Design
-
 ### Data Path
+Insert the full diagram
 ### Instruction Set Architecture
+
+   
 #### Formats of the entire instruction set
 #### Control Signal Table
 ### Interface of Microprocessor components
