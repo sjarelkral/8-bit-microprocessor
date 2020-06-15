@@ -28,7 +28,7 @@ A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
    * Register to which `RegWriteData` is written
    * Value of `pc` i.e *next instruction to be executed*
    * Value of `MemRead`, `MemWrite`, `RegWrite`, `op` and `clock`
-## Modules
+## Modules and Code Structure
 * **Microprocessor** : 
    * The ALU, control unit, system memory, frequency divider, pc and registers are condensed into a behavioural description of `Microprocessor` module. This module is responsible for all the external inputs and output and forms the core part of the project. 
    ``` verilog
@@ -94,7 +94,14 @@ A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
    
    end
    ```
-   
+   * The storage elements in the project are implemented using the `reg` type variable.
+   ```verilog
+   //Storage elements
+   reg [7:0]registers[3:0];
+   reg [7:0]pc;
+   reg [7:0]memory[31:0];
+   reg [4:0]rw_num;
+   ```
 * **Console** : 
    * `Console` module is a 4-bit Hexadecimal to 7-segment display converter. This module is a data-flow style description that asserts or deasserts 7 output wires based on the values of 4 input lines. It forms a part of the `Microprocessor` module where it encoded Hexadecimal output to 7-segment display to provide user with external output.
    ```verilog
