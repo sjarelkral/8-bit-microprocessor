@@ -153,5 +153,9 @@ Insert the full diagram
 * Most of the control signals in the Microprocessor design were not explicitly implemented in the behavioral description model as they are automatically generated in the conditional blocks and in the use of appropriate variables.
 * `MemRead`, `MemWrite`, `RegWrite` and `op` are explicitly defined to provide handy output signals for the user.
 ### Interface of Microprocessor components
+* **Program Counter** :
+   * Indicates the address of the instructions. Initial PC value is 0.
+* **Program Counter** :
+   * Indicates the address of the instructions. Initial PC value is 0.
 ## Example test set: Input/Output
 ## Test Environment
