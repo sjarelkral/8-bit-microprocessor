@@ -22,7 +22,7 @@ A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
 * **Input** :
    * 8-bit `instruction` from external memory
    * `reset` button
-   * 0.25Hz ans 0.5Hz frequency selectors: `frequency_4` and `frequency_2`
+   * 0.25Hz and 0.5Hz frequency selectors: `frequency_4` and `frequency_2`
 * **Output** :
    * Current value of `RegWriteData` in Hexadecimal
    * Register to which `RegWriteData` is written
