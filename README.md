@@ -29,7 +29,7 @@ A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
    * Value of `MemRead`, `MemWrite`, `RegWrite`, `op` and `clock`
 ## Modules
 * **Microprocessor** : 
-   * The ALU, control unit, system memory, frequency divider, pc and registers are condensed into a behavioural description of `Microprocessor` module.
+   * The ALU, control unit, system memory, frequency divider, pc and registers are condensed into a behavioural description of `Microprocessor` module. This module is responsible for all the external inputs and output and forms the core part of the project. 
    ``` verilog
    module Microprocessor(
     output clock,	
@@ -50,7 +50,27 @@ A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
     input [7:0]instruction
     );
    ```
-   
+   * Clock for the processor is obtained using an embedded `frequency divider` which uses a delay technique to generate parallel slower clocks. Furthermore, a desired clock is selected based on the frequency input values.
+   ```verilog
+   always @(posedge oscillator)begin
+    	delay  <= (delay == 25000000)?26'd0:(delay+1);
+    	if (delay == 26'd0)begin
+    		sec <= ~sec;
+    	end
+    end
+
+    always @ ( posedge sec ) begin
+      two_sec <= ~two_sec;
+    end
+
+    always @ ( posedge two_sec ) begin
+      four_sec <= ~four_sec;
+    end
+
+    assign clock = frequency_4 ? four_sec:
+                    frequency_2 ? two_sec :
+                    sec;
+   ```
 * **Console** : 
    * `Console` module is a 4-bit Hexadecimal to 7-segment display converter.
 * **IMEM** : 
