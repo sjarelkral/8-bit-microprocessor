@@ -7,8 +7,8 @@
         * [Formats of the entire instruction set](https://github.com/sjarelkral/Microprocessor/blob/master/README.md#formats-of-the-entire-instruction-set)
         * [Control Signals](https://github.com/sjarelkral/Microprocessor/blob/master/README.md#control-signals)
     * [Interface of Microprocessor components](https://github.com/sjarelkral/Microprocessor/blob/master/README.md#interface-of-microprocessor-components)
-* [Example test set: Input/Output](https://github.com/sjarelkral/Microprocessor/blob/master/README.md#example-test-set-inputoutput)
-* [Test Environment](https://github.com/sjarelkral/Microprocessor/blob/master/README.md#test-environment)
+* [Verilog Testbench and Simulation](https://github.com/sjarelkral/Microprocessor/blob/master/README.md#verilog-testbench-and-simulation)
+* [FPGA programming and Testing](https://github.com/sjarelkral/Microprocessor/blob/master/README.md#test-environment)
 
 ## Project Overview
 A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
