@@ -119,7 +119,7 @@ A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
     assign ir = instruction;
    ```
 * **Console** :
-   * module is a 4-bit Hexadecimal to 7-segment display converter. This module is a data-flow style description that asserts or deasserts 7 output wires based on the values of 4 input lines. It forms a part of the `Microprocessor` module where it encoded Hexadecimal output to 7-segment display to provide user with external output.
+   * `Console` module is a 4-bit Hexadecimal to 7-segment display converter. This module is a data-flow style description that asserts or deasserts 7 output wires based on the values of 4 input lines. It forms a part of the `Microprocessor` module where it encoded Hexadecimal output to 7-segment display to provide user with external output.
    ```verilog
    module Console(
     output [6:0]sseg,
