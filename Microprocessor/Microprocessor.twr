@@ -45,15 +45,15 @@ Setup/Hold to clock frequency_2
               |Max Setup to|Max Hold to |                  | Clock  |
 Source        | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 --------------+------------+------------+------------------+--------+
-instruction<0>|    3.877(R)|    2.569(R)|clock_OBUF        |   0.000|
-instruction<1>|   -1.320(R)|    2.903(R)|clock_OBUF        |   0.000|
-instruction<2>|    5.189(R)|    2.529(R)|clock_OBUF        |   0.000|
-instruction<3>|    4.688(R)|    2.986(R)|clock_OBUF        |   0.000|
-instruction<4>|    5.610(R)|    1.176(R)|clock_OBUF        |   0.000|
-instruction<5>|    5.610(R)|    0.613(R)|clock_OBUF        |   0.000|
-instruction<6>|    4.132(R)|    3.008(R)|clock_OBUF        |   0.000|
-instruction<7>|    4.060(R)|    2.743(R)|clock_OBUF        |   0.000|
-reset         |   -0.726(R)|    2.706(R)|clock_OBUF        |   0.000|
+instruction<0>|    5.404(R)|    2.093(R)|clock_OBUF        |   0.000|
+instruction<1>|   -0.696(R)|    2.274(R)|clock_OBUF        |   0.000|
+instruction<2>|    4.533(R)|    2.371(R)|clock_OBUF        |   0.000|
+instruction<3>|    4.930(R)|    2.058(R)|clock_OBUF        |   0.000|
+instruction<4>|    6.002(R)|    0.527(R)|clock_OBUF        |   0.000|
+instruction<5>|    5.475(R)|    0.600(R)|clock_OBUF        |   0.000|
+instruction<6>|    4.679(R)|    2.552(R)|clock_OBUF        |   0.000|
+instruction<7>|    4.950(R)|    2.539(R)|clock_OBUF        |   0.000|
+reset         |   -0.699(R)|    2.312(R)|clock_OBUF        |   0.000|
 --------------+------------+------------+------------------+--------+
 
 Setup/Hold to clock frequency_4
@@ -61,15 +61,15 @@ Setup/Hold to clock frequency_4
               |Max Setup to|Max Hold to |                  | Clock  |
 Source        | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 --------------+------------+------------+------------------+--------+
-instruction<0>|    3.681(R)|    2.849(R)|clock_OBUF        |   0.000|
-instruction<1>|   -1.516(R)|    3.183(R)|clock_OBUF        |   0.000|
-instruction<2>|    4.993(R)|    2.809(R)|clock_OBUF        |   0.000|
-instruction<3>|    4.492(R)|    3.266(R)|clock_OBUF        |   0.000|
-instruction<4>|    5.414(R)|    1.456(R)|clock_OBUF        |   0.000|
-instruction<5>|    5.414(R)|    0.893(R)|clock_OBUF        |   0.000|
-instruction<6>|    3.936(R)|    3.288(R)|clock_OBUF        |   0.000|
-instruction<7>|    3.864(R)|    3.023(R)|clock_OBUF        |   0.000|
-reset         |   -0.922(R)|    2.986(R)|clock_OBUF        |   0.000|
+instruction<0>|    5.698(R)|    1.759(R)|clock_OBUF        |   0.000|
+instruction<1>|   -0.402(R)|    1.940(R)|clock_OBUF        |   0.000|
+instruction<2>|    4.827(R)|    2.037(R)|clock_OBUF        |   0.000|
+instruction<3>|    5.224(R)|    1.724(R)|clock_OBUF        |   0.000|
+instruction<4>|    6.296(R)|    0.193(R)|clock_OBUF        |   0.000|
+instruction<5>|    5.769(R)|    0.266(R)|clock_OBUF        |   0.000|
+instruction<6>|    4.973(R)|    2.218(R)|clock_OBUF        |   0.000|
+instruction<7>|    5.244(R)|    2.205(R)|clock_OBUF        |   0.000|
+reset         |   -0.405(R)|    1.978(R)|clock_OBUF        |   0.000|
 --------------+------------+------------+------------------+--------+
 
 Clock frequency_2 to Pad
@@ -77,49 +77,49 @@ Clock frequency_2 to Pad
                       | clk (edge) |                  | Clock  |
 Destination           |   to PAD   |Internal Clock(s) | Phase  |
 ----------------------+------------+------------------+--------+
-instruction_address<0>|   10.420(R)|clock_OBUF        |   0.000|
-instruction_address<1>|   10.206(R)|clock_OBUF        |   0.000|
-instruction_address<2>|   10.083(R)|clock_OBUF        |   0.000|
-instruction_address<3>|   10.167(R)|clock_OBUF        |   0.000|
-instruction_address<4>|   10.003(R)|clock_OBUF        |   0.000|
-instruction_address<5>|   10.365(R)|clock_OBUF        |   0.000|
-instruction_address<6>|   10.014(R)|clock_OBUF        |   0.000|
-instruction_address<7>|   10.200(R)|clock_OBUF        |   0.000|
-pc_high<0>            |   12.395(R)|clock_OBUF        |   0.000|
-pc_high<1>            |   12.009(R)|clock_OBUF        |   0.000|
-pc_high<2>            |   12.397(R)|clock_OBUF        |   0.000|
-pc_high<3>            |   12.000(R)|clock_OBUF        |   0.000|
-pc_high<4>            |   12.624(R)|clock_OBUF        |   0.000|
-pc_high<5>            |   11.466(R)|clock_OBUF        |   0.000|
-pc_high<6>            |   12.449(R)|clock_OBUF        |   0.000|
-pc_low<0>             |   11.236(R)|clock_OBUF        |   0.000|
-pc_low<1>             |   11.683(R)|clock_OBUF        |   0.000|
-pc_low<2>             |   11.053(R)|clock_OBUF        |   0.000|
-pc_low<3>             |   11.357(R)|clock_OBUF        |   0.000|
-pc_low<4>             |   11.357(R)|clock_OBUF        |   0.000|
-pc_low<5>             |   11.376(R)|clock_OBUF        |   0.000|
-pc_low<6>             |   11.224(R)|clock_OBUF        |   0.000|
-reg_num<0>            |   13.319(R)|clock_OBUF        |   0.000|
-reg_num<1>            |   10.456(R)|clock_OBUF        |   0.000|
-reg_num<2>            |   13.047(R)|clock_OBUF        |   0.000|
-reg_num<3>            |   13.108(R)|clock_OBUF        |   0.000|
-reg_num<4>            |   12.265(R)|clock_OBUF        |   0.000|
-reg_num<5>            |   13.295(R)|clock_OBUF        |   0.000|
-reg_num<6>            |   13.012(R)|clock_OBUF        |   0.000|
-rwd_0<0>              |   15.364(R)|clock_OBUF        |   0.000|
-rwd_0<1>              |   15.368(R)|clock_OBUF        |   0.000|
-rwd_0<2>              |   15.427(R)|clock_OBUF        |   0.000|
-rwd_0<3>              |   15.157(R)|clock_OBUF        |   0.000|
-rwd_0<4>              |   15.634(R)|clock_OBUF        |   0.000|
-rwd_0<5>              |   15.836(R)|clock_OBUF        |   0.000|
-rwd_0<6>              |   15.795(R)|clock_OBUF        |   0.000|
-rwd_1<0>              |   14.367(R)|clock_OBUF        |   0.000|
-rwd_1<1>              |   14.628(R)|clock_OBUF        |   0.000|
-rwd_1<2>              |   14.434(R)|clock_OBUF        |   0.000|
-rwd_1<3>              |   14.641(R)|clock_OBUF        |   0.000|
-rwd_1<4>              |   14.364(R)|clock_OBUF        |   0.000|
-rwd_1<5>              |   14.386(R)|clock_OBUF        |   0.000|
-rwd_1<6>              |   14.548(R)|clock_OBUF        |   0.000|
+instruction_address<0>|    9.985(R)|clock_OBUF        |   0.000|
+instruction_address<1>|    9.911(R)|clock_OBUF        |   0.000|
+instruction_address<2>|    9.912(R)|clock_OBUF        |   0.000|
+instruction_address<3>|    9.869(R)|clock_OBUF        |   0.000|
+instruction_address<4>|   10.115(R)|clock_OBUF        |   0.000|
+instruction_address<5>|    9.852(R)|clock_OBUF        |   0.000|
+instruction_address<6>|   10.224(R)|clock_OBUF        |   0.000|
+instruction_address<7>|   10.512(R)|clock_OBUF        |   0.000|
+pc_high<0>            |   11.673(R)|clock_OBUF        |   0.000|
+pc_high<1>            |   11.481(R)|clock_OBUF        |   0.000|
+pc_high<2>            |   11.616(R)|clock_OBUF        |   0.000|
+pc_high<3>            |   11.447(R)|clock_OBUF        |   0.000|
+pc_high<4>            |   11.502(R)|clock_OBUF        |   0.000|
+pc_high<5>            |   11.783(R)|clock_OBUF        |   0.000|
+pc_high<6>            |   11.702(R)|clock_OBUF        |   0.000|
+pc_low<0>             |   11.547(R)|clock_OBUF        |   0.000|
+pc_low<1>             |   11.375(R)|clock_OBUF        |   0.000|
+pc_low<2>             |   11.567(R)|clock_OBUF        |   0.000|
+pc_low<3>             |   11.078(R)|clock_OBUF        |   0.000|
+pc_low<4>             |   11.065(R)|clock_OBUF        |   0.000|
+pc_low<5>             |   11.314(R)|clock_OBUF        |   0.000|
+pc_low<6>             |   11.138(R)|clock_OBUF        |   0.000|
+reg_num<0>            |   11.830(R)|clock_OBUF        |   0.000|
+reg_num<1>            |    9.782(R)|clock_OBUF        |   0.000|
+reg_num<2>            |   11.644(R)|clock_OBUF        |   0.000|
+reg_num<3>            |   11.605(R)|clock_OBUF        |   0.000|
+reg_num<4>            |   11.885(R)|clock_OBUF        |   0.000|
+reg_num<5>            |   12.065(R)|clock_OBUF        |   0.000|
+reg_num<6>            |   11.857(R)|clock_OBUF        |   0.000|
+rwd_0<0>              |   13.482(R)|clock_OBUF        |   0.000|
+rwd_0<1>              |   13.240(R)|clock_OBUF        |   0.000|
+rwd_0<2>              |   13.247(R)|clock_OBUF        |   0.000|
+rwd_0<3>              |   13.130(R)|clock_OBUF        |   0.000|
+rwd_0<4>              |   13.137(R)|clock_OBUF        |   0.000|
+rwd_0<5>              |   14.032(R)|clock_OBUF        |   0.000|
+rwd_0<6>              |   14.359(R)|clock_OBUF        |   0.000|
+rwd_1<0>              |   13.434(R)|clock_OBUF        |   0.000|
+rwd_1<1>              |   13.437(R)|clock_OBUF        |   0.000|
+rwd_1<2>              |   13.427(R)|clock_OBUF        |   0.000|
+rwd_1<3>              |   13.662(R)|clock_OBUF        |   0.000|
+rwd_1<4>              |   13.278(R)|clock_OBUF        |   0.000|
+rwd_1<5>              |   13.437(R)|clock_OBUF        |   0.000|
+rwd_1<6>              |   14.188(R)|clock_OBUF        |   0.000|
 ----------------------+------------+------------------+--------+
 
 Clock frequency_4 to Pad
@@ -127,49 +127,49 @@ Clock frequency_4 to Pad
                       | clk (edge) |                  | Clock  |
 Destination           |   to PAD   |Internal Clock(s) | Phase  |
 ----------------------+------------+------------------+--------+
-instruction_address<0>|   10.700(R)|clock_OBUF        |   0.000|
-instruction_address<1>|   10.486(R)|clock_OBUF        |   0.000|
-instruction_address<2>|   10.363(R)|clock_OBUF        |   0.000|
-instruction_address<3>|   10.447(R)|clock_OBUF        |   0.000|
-instruction_address<4>|   10.283(R)|clock_OBUF        |   0.000|
-instruction_address<5>|   10.645(R)|clock_OBUF        |   0.000|
-instruction_address<6>|   10.294(R)|clock_OBUF        |   0.000|
-instruction_address<7>|   10.480(R)|clock_OBUF        |   0.000|
-pc_high<0>            |   12.675(R)|clock_OBUF        |   0.000|
-pc_high<1>            |   12.289(R)|clock_OBUF        |   0.000|
-pc_high<2>            |   12.677(R)|clock_OBUF        |   0.000|
-pc_high<3>            |   12.280(R)|clock_OBUF        |   0.000|
-pc_high<4>            |   12.904(R)|clock_OBUF        |   0.000|
-pc_high<5>            |   11.746(R)|clock_OBUF        |   0.000|
-pc_high<6>            |   12.729(R)|clock_OBUF        |   0.000|
-pc_low<0>             |   11.516(R)|clock_OBUF        |   0.000|
-pc_low<1>             |   11.963(R)|clock_OBUF        |   0.000|
-pc_low<2>             |   11.333(R)|clock_OBUF        |   0.000|
-pc_low<3>             |   11.637(R)|clock_OBUF        |   0.000|
-pc_low<4>             |   11.637(R)|clock_OBUF        |   0.000|
-pc_low<5>             |   11.656(R)|clock_OBUF        |   0.000|
-pc_low<6>             |   11.504(R)|clock_OBUF        |   0.000|
-reg_num<0>            |   13.599(R)|clock_OBUF        |   0.000|
-reg_num<1>            |   10.736(R)|clock_OBUF        |   0.000|
-reg_num<2>            |   13.327(R)|clock_OBUF        |   0.000|
-reg_num<3>            |   13.388(R)|clock_OBUF        |   0.000|
-reg_num<4>            |   12.545(R)|clock_OBUF        |   0.000|
-reg_num<5>            |   13.575(R)|clock_OBUF        |   0.000|
-reg_num<6>            |   13.292(R)|clock_OBUF        |   0.000|
-rwd_0<0>              |   15.644(R)|clock_OBUF        |   0.000|
-rwd_0<1>              |   15.648(R)|clock_OBUF        |   0.000|
-rwd_0<2>              |   15.707(R)|clock_OBUF        |   0.000|
-rwd_0<3>              |   15.437(R)|clock_OBUF        |   0.000|
-rwd_0<4>              |   15.914(R)|clock_OBUF        |   0.000|
-rwd_0<5>              |   16.116(R)|clock_OBUF        |   0.000|
-rwd_0<6>              |   16.075(R)|clock_OBUF        |   0.000|
-rwd_1<0>              |   14.647(R)|clock_OBUF        |   0.000|
-rwd_1<1>              |   14.908(R)|clock_OBUF        |   0.000|
-rwd_1<2>              |   14.714(R)|clock_OBUF        |   0.000|
-rwd_1<3>              |   14.921(R)|clock_OBUF        |   0.000|
-rwd_1<4>              |   14.644(R)|clock_OBUF        |   0.000|
-rwd_1<5>              |   14.666(R)|clock_OBUF        |   0.000|
-rwd_1<6>              |   14.828(R)|clock_OBUF        |   0.000|
+instruction_address<0>|    9.651(R)|clock_OBUF        |   0.000|
+instruction_address<1>|    9.577(R)|clock_OBUF        |   0.000|
+instruction_address<2>|    9.578(R)|clock_OBUF        |   0.000|
+instruction_address<3>|    9.535(R)|clock_OBUF        |   0.000|
+instruction_address<4>|    9.781(R)|clock_OBUF        |   0.000|
+instruction_address<5>|    9.518(R)|clock_OBUF        |   0.000|
+instruction_address<6>|    9.890(R)|clock_OBUF        |   0.000|
+instruction_address<7>|   10.178(R)|clock_OBUF        |   0.000|
+pc_high<0>            |   11.339(R)|clock_OBUF        |   0.000|
+pc_high<1>            |   11.147(R)|clock_OBUF        |   0.000|
+pc_high<2>            |   11.282(R)|clock_OBUF        |   0.000|
+pc_high<3>            |   11.113(R)|clock_OBUF        |   0.000|
+pc_high<4>            |   11.168(R)|clock_OBUF        |   0.000|
+pc_high<5>            |   11.449(R)|clock_OBUF        |   0.000|
+pc_high<6>            |   11.368(R)|clock_OBUF        |   0.000|
+pc_low<0>             |   11.213(R)|clock_OBUF        |   0.000|
+pc_low<1>             |   11.041(R)|clock_OBUF        |   0.000|
+pc_low<2>             |   11.233(R)|clock_OBUF        |   0.000|
+pc_low<3>             |   10.744(R)|clock_OBUF        |   0.000|
+pc_low<4>             |   10.731(R)|clock_OBUF        |   0.000|
+pc_low<5>             |   10.980(R)|clock_OBUF        |   0.000|
+pc_low<6>             |   10.804(R)|clock_OBUF        |   0.000|
+reg_num<0>            |   11.496(R)|clock_OBUF        |   0.000|
+reg_num<1>            |    9.448(R)|clock_OBUF        |   0.000|
+reg_num<2>            |   11.310(R)|clock_OBUF        |   0.000|
+reg_num<3>            |   11.271(R)|clock_OBUF        |   0.000|
+reg_num<4>            |   11.551(R)|clock_OBUF        |   0.000|
+reg_num<5>            |   11.731(R)|clock_OBUF        |   0.000|
+reg_num<6>            |   11.523(R)|clock_OBUF        |   0.000|
+rwd_0<0>              |   13.148(R)|clock_OBUF        |   0.000|
+rwd_0<1>              |   12.906(R)|clock_OBUF        |   0.000|
+rwd_0<2>              |   12.913(R)|clock_OBUF        |   0.000|
+rwd_0<3>              |   12.796(R)|clock_OBUF        |   0.000|
+rwd_0<4>              |   12.803(R)|clock_OBUF        |   0.000|
+rwd_0<5>              |   13.698(R)|clock_OBUF        |   0.000|
+rwd_0<6>              |   14.025(R)|clock_OBUF        |   0.000|
+rwd_1<0>              |   13.100(R)|clock_OBUF        |   0.000|
+rwd_1<1>              |   13.103(R)|clock_OBUF        |   0.000|
+rwd_1<2>              |   13.093(R)|clock_OBUF        |   0.000|
+rwd_1<3>              |   13.328(R)|clock_OBUF        |   0.000|
+rwd_1<4>              |   12.944(R)|clock_OBUF        |   0.000|
+rwd_1<5>              |   13.103(R)|clock_OBUF        |   0.000|
+rwd_1<6>              |   13.854(R)|clock_OBUF        |   0.000|
 ----------------------+------------+------------------+--------+
 
 Clock oscillator to Pad
@@ -177,7 +177,7 @@ Clock oscillator to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-clock       |    8.482(R)|oscillator_BUFGP  |   0.000|
+clock       |    9.109(R)|oscillator_BUFGP  |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock frequency_2
@@ -185,8 +185,8 @@ Clock to Setup on destination clock frequency_2
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-frequency_2    |    7.140|         |         |         |
-frequency_4    |    7.140|         |         |         |
+frequency_2    |    7.914|         |         |         |
+frequency_4    |    7.914|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock frequency_4
@@ -194,8 +194,8 @@ Clock to Setup on destination clock frequency_4
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-frequency_2    |    7.140|         |         |         |
-frequency_4    |    7.140|         |         |         |
+frequency_2    |    7.914|         |         |         |
+frequency_4    |    7.914|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock oscillator
@@ -203,26 +203,26 @@ Clock to Setup on destination clock oscillator
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-oscillator     |    4.732|         |         |         |
+oscillator     |    4.582|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-frequency_2    |clock          |    7.353|
-frequency_4    |clock          |    7.633|
-instruction<6> |mem_read       |    7.714|
-instruction<6> |mem_write      |    7.633|
-instruction<6> |op<0>          |    6.464|
-instruction<7> |mem_read       |    7.607|
-instruction<7> |mem_write      |    7.561|
-instruction<7> |op<1>          |    6.319|
-instruction<7> |reg_write      |    6.553|
+frequency_2    |clock          |    7.505|
+frequency_4    |clock          |    7.171|
+instruction<6> |mem_read       |    7.754|
+instruction<6> |mem_write      |    7.711|
+instruction<6> |op<0>          |    6.768|
+instruction<7> |mem_read       |    8.028|
+instruction<7> |mem_write      |    7.982|
+instruction<7> |op<1>          |    6.290|
+instruction<7> |reg_write      |    7.044|
 ---------------+---------------+---------+
 
 
-Analysis completed Mon Jun 15 17:40:56 2020 
+Analysis completed Mon Jun 15 20:12:01 2020 
 --------------------------------------------------------------------------------
 
 Trace Settings:

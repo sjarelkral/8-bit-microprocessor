@@ -26,7 +26,7 @@ module Microprocessor(
     output [1:0]op,
     output [6:0]reg_num,
     output [6:0]pc_high,
-	  output [6:0]pc_low,
+	 output [6:0]pc_low,
     output [7:0]instruction_address,
     output [6:0]rwd_1,
     output [6:0]rwd_0,
@@ -100,7 +100,7 @@ module Microprocessor(
     if (reset) begin
       //reset pc
       pc <= 8'd0;
-		pc_invalid <= 1'b1;
+		pc_invalid <= 1'b0;
 		data_invalid <= 1'b1;
 		reg_invalid <= 1'b1;
 
