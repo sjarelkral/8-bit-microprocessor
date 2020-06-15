@@ -102,7 +102,22 @@ A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
    reg [7:0]memory[31:0];
    reg [2:0]rw_num; //Register whose value is RegWriteData (to be displayed)
    ```
-* **Console** : 
+   * Buses and connections in the `Microprocessor` are achieved through wires and assign statements.
+   ```verilog
+   wire [7:0]immediate;
+	wire [7:0]display_bus = registers[rw_num];
+	wire [7:0]ir;
+   ```
+   ```verilog
+    //connections
+    assign instruction_address = pc;
+    assign immediate = {ir[1],ir[1],ir[1],ir[1],ir[1],ir[1],ir[1],ir[0]}; //signext
+    assign mem_write = (op == 2'b10);
+    assign mem_read = (op == 2'b01);
+    assign reg_write = ~op[1];
+    assign op = ir[7:6];
+    assign ir = instruction;
+   ```
    * `Console` module is a 4-bit Hexadecimal to 7-segment display converter. This module is a data-flow style description that asserts or deasserts 7 output wires based on the values of 4 input lines. It forms a part of the `Microprocessor` module where it encoded Hexadecimal output to 7-segment display to provide user with external output.
    ```verilog
    module Console(
