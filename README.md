@@ -89,7 +89,13 @@ A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
    );
    ```
 * **IMEM** : 
-   * `IMEM` module is a testbench for the microprocessor.
+   * `IMEM` module is a write once read many times instruction memory. It gets an 8-bit instruction address and gives an 8-bit instruction.
+   ```verilog
+   module IMEM(
+    output [7:0] instruction,
+    input [7:0] Read_Address
+    );
+   ```
 ## Microprocessor Design
 ### Data Path
 Insert the full diagram
