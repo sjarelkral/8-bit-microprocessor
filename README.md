@@ -80,7 +80,7 @@ A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
                     frequency_2 ? two_sec :
                     sec;
    ```
-   * The main part of the sequential circuit description is an always block that is triggered by the positive edge of the `clock` and an asynchronous `reset` input .The later resets the registers, memory and the pc to their default values when asserted.
+   * The main part of the sequential circuit description is an always block that is triggered by the positive edge of the `clock` and an asynchronous `reset` input .The latter resets the registers, memory and the pc to their default values when asserted.
    ```verilog
    always @ (posedge clock or posedge reset) begin
    
@@ -148,9 +148,10 @@ A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
 Insert the full diagram
 ### Instruction Set Architecture
 
-   
 #### Formats of the entire instruction set
-#### Control Signal Table
+#### Control Signals
+* Most of the control signals in the Microprocessor design were not explicitly implemented in the behavioral description model as they are automatically generated in the conditional blocks and in the use of appropriate variables.
+* `MemRead`, `MemWrite`, `RegWrite` and `op` are explicitly defined to provide handy output signals for the user.
 ### Interface of Microprocessor components
 ## Example test set: Input/Output
 ## Test Environment
