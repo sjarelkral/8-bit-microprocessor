@@ -155,7 +155,8 @@ Insert the full diagram
 ### Interface of Microprocessor components
 * **Program Counter** :
    * Indicates the address of the instructions. Initial PC value is 0.
-* **Program Counter** :
-   * Indicates the address of the instructions. Initial PC value is 0.
+* **Registers** :
+   * There are four 8-bit general purpose registers.
+   * Every time `RegWrite` is asserted, the corresponding register and it's new value (`RegWriteData`) is displayed.
 ## Example test set: Input/Output
 ## Test Environment
