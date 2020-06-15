@@ -96,9 +96,61 @@ module Microprocessor(
     assign reg_write = ~op[1];
     assign op = op_out;
 
-    always @ (posedge clock) begin
+    always @ (posedge clock or posedge reset) begin
+	 
+		if (reset) begin
+			//Asynchronous reset trigers a reset sequence
 
-      if (~reset) begin
+			//reset pc
+			pc <= 8'd0;
+			pc_invalid <= 1'b0;
+			data_invalid <= 1'b1;
+			reg_invalid <= 1'b1;
+
+			//reset registers
+			registers[0] <= 8'd0;
+			registers[1] <= 8'd0;
+			registers[2] <= 8'd0;
+			registers[3] <= 8'd0;
+
+
+			//reinitialize memory
+			memory[0] <= 0;
+			memory[1] <= 1;
+			memory[2] <= 2;
+			memory[3] <= 3;
+			memory[4] <= 4;
+			memory[5] <= 5;
+			memory[6] <= 6;
+			memory[7] <= 7;
+			memory[8] <= 8;
+			memory[9] <= 9;
+			memory[10] <= 10;
+			memory[11] <= 11;
+			memory[12] <= 12;
+			memory[13] <= 13;
+			memory[14] <= 14;
+			memory[15] <= 15;
+			memory[16] <= 0;
+			memory[17] <= -1;
+			memory[18] <= -2;
+			memory[19] <= -3;
+			memory[20] <= -4;
+			memory[21] <= -5;
+			memory[22] <= -6;
+			memory[23] <= -7;
+			memory[24] <= -8;
+			memory[25] <= -9;
+			memory[26] <= -10;
+			memory[27] <= -11;
+			memory[28] <= -12;
+			memory[29] <= -13;
+			memory[30] <= -14;
+			memory[31] <= -15;
+		end
+
+
+      else begin
 
       op_out <= instruction[7:6];
       //Increment PC
@@ -144,60 +196,9 @@ module Microprocessor(
 			     pc <= pc + immediate+1;
 		    end
       end
+		
+		
+	  end
 
-	   end
-
-  always @ (reset) begin
-
-  //Asynchronous reset trigers a reset sequence
-
-    //reset pc
-    pc <= 8'd0;
-    pc_invalid <= 1'b0;
-    data_invalid <= 1'b1;
-    reg_invalid <= 1'b1;
-
-    //reset registers
-    registers[0] <= 8'd0;
-    registers[1] <= 8'd0;
-    registers[2] <= 8'd0;
-    registers[3] <= 8'd0;
-
-
-    //reinitialize memory
-    memory[0] <= 0;
-    memory[1] <= 1;
-    memory[2] <= 2;
-    memory[3] <= 3;
-    memory[4] <= 4;
-    memory[5] <= 5;
-    memory[6] <= 6;
-    memory[7] <= 7;
-    memory[8] <= 8;
-    memory[9] <= 9;
-    memory[10] <= 10;
-    memory[11] <= 11;
-    memory[12] <= 12;
-    memory[13] <= 13;
-    memory[14] <= 14;
-    memory[15] <= 15;
-    memory[16] <= 0;
-    memory[17] <= -1;
-    memory[18] <= -2;
-    memory[19] <= -3;
-    memory[20] <= -4;
-    memory[21] <= -5;
-    memory[22] <= -6;
-    memory[23] <= -7;
-    memory[24] <= -8;
-    memory[25] <= -9;
-    memory[26] <= -10;
-    memory[27] <= -11;
-    memory[28] <= -12;
-    memory[29] <= -13;
-    memory[30] <= -14;
-    memory[31] <= -15;
-
-  end
 
 endmodule
