@@ -80,6 +80,21 @@ A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
                     frequency_2 ? two_sec :
                     sec;
    ```
+   * The main part of the sequential circuit description is an always block that is triggered by the positive edge of the `clock` and an asynchronous `reset` input .The later resets the registers, memory and the pc to their default values when asserted.
+   ```verilog
+   always @ (posedge clock or posedge reset) begin
+   
+   if (reset)
+   ... //Reinitialize memory, registers and pc
+   end
+   
+   else begin
+   ...//Instruction execution and update of the output variables
+   end
+   
+   end
+   ```
+   
 * **Console** : 
    * `Console` module is a 4-bit Hexadecimal to 7-segment display converter. This module is a data-flow style description that asserts or deasserts 7 output wires based on the values of 4 input lines. It forms a part of the `Microprocessor` module where it encoded Hexadecimal output to 7-segment display to provide user with external output.
    ```verilog
