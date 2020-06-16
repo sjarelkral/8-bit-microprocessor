@@ -1,14 +1,14 @@
 # 8-Bit Microprocessor
-* [Project Overview](https://github.com/sjarelkral/Microprocessor/blob/master/README.md#project-overview)
-* [Modules and Code Structure](https://github.com/sjarelkral/Microprocessor/blob/master/README.md#modules-and-code-structure)
-* [Microprocessor Design](https://github.com/sjarelkral/Microprocessor/blob/master/README.md#microprocessor-design)
-    * [Data Path](https://github.com/sjarelkral/Microprocessor/blob/master/README.md#data-path)
-    * [Instruction Set Architecture](https://github.com/sjarelkral/Microprocessor/blob/master/README.md#instruction-set-architecture)
-        * [Formats of the entire instruction set](https://github.com/sjarelkral/Microprocessor/blob/master/README.md#formats-of-the-entire-instruction-set)
-        * [Control Signals](https://github.com/sjarelkral/Microprocessor/blob/master/README.md#control-signals)
-    * [Interface of Microprocessor components](https://github.com/sjarelkral/Microprocessor/blob/master/README.md#interface-of-microprocessor-components)
-* [Verilog Testbench and Simulation](https://github.com/sjarelkral/Microprocessor/blob/master/README.md#verilog-testbench-and-simulation)
-* [Simulation and Testing](https://github.com/sjarelkral/Microprocessor/blob/master/README.md#test-environment)
+* [Project Overview](README.md#project-overview)
+* [Modules and Code Structure](README.md#modules-and-code-structure)
+* [Microprocessor Design](README.md#microprocessor-design)
+    * [Data Path](README.md#data-path)
+    * [Instruction Set Architecture](README.md#instruction-set-architecture)
+        * [Formats of the entire instruction set](README.md#formats-of-the-entire-instruction-set)
+        * [Control Signals](README.md#control-signals)
+    * [Interface of Microprocessor components](README.md#interface-of-microprocessor-components)
+* [Verilog Testbench and Simulation](README.md#verilog-testbench-and-simulation)
+* [Simulation and Testing](README.md#simulation-and-testing)
 
 ## Project Overview
 A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
