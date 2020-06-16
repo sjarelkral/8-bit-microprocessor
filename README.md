@@ -54,7 +54,7 @@ A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
    ```
    * Clock for the processor is obtained using an embedded `frequency divider` which uses a delay technique to generate parallel slower clocks. Furthermore, a desired clock is selected based on the frequency input values.
    ```verilog
-  //Frequency dividers : Generate 1 Hz clock (output LED, internal input for components)
+  //Frequency divider section
     reg [25:0] delay;
     reg delay_2;
     reg delay_4;
@@ -85,39 +85,46 @@ A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
    ```verilog
    always @ (posedge clock or posedge reset) begin
    
-   if (reset)
+   if (reset) begin
    ... //Reinitialize memory, registers and pc
    end
    
    else begin
-   ...//Instruction execution and update of the output variables
+   ...//Instruction execution, calculate new PC value and update of the output register
    end
    
    end
    ```
    * The storage elements in the project are implemented using the `reg` type variable.
    ```verilog
-   //Storage elements
-   reg [7:0]registers[3:0];
-   reg [7:0]pc;
-   reg [7:0]memory[31:0];
-   reg [2:0]rw_num; //Register whose value is RegWriteData (to be displayed)
+   //Memory and Registers section
+    reg [7:0]registers[3:0];
+    reg [7:0]pc;
+    reg [7:0]memory[31:0];
    ```
-   * Buses and connections in the `Microprocessor` are achieved through wires and assign statements.
+   * Bus connections and convenience storage elements.
    ```verilog
-   wire [7:0]immediate;
-	wire [7:0]display_bus = registers[rw_num];
-	wire [7:0]ir;
+  //Output convenience registers
+    reg [4:0]rw_num;
+    reg [1:0]op_out;
+    reg data_invalid;
+    reg reg_invalid;
+
+    //buses
+    wire [7:0]immediate;
+    wire [7:0]display_bus = registers[rw_num];
    ```
    ```verilog
     //connections
     assign instruction_address = pc;
-    assign immediate = {ir[1],ir[1],ir[1],ir[1],ir[1],ir[1],ir[1],ir[0]}; //signext
+    assign immediate = {instruction[1],instruction[1],instruction[1],
+                        instruction[1],instruction[1],instruction[1],
+                        instruction[1],instruction[0]}; //signext
     assign mem_write = (op == 2'b10);
     assign mem_read = (op == 2'b01);
     assign reg_write = ~op[1];
-    assign op = ir[7:6];
-    assign ir = instruction;
+    assign op = op_out;
+    assign r_symbol = 2'b11;
    ```
 * **Console** :
    * `Console` module is a 4-bit Hexadecimal to 7-segment display converter. This module is a data-flow style description that asserts or deasserts 7 output wires based on the values of 4 input lines. It forms a part of the `Microprocessor` module where it encoded Hexadecimal output to 7-segment display to provide user with external output.
