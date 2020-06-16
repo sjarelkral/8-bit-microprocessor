@@ -176,7 +176,8 @@ A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
 * **Data Memory**
    * 8-bit address i.e 256 adress locations but only 32 address locations are used.
    * Initial values are: `[0]0, [1]1, ... , [15]15, [16]0, [17]-1, ... ,[31]-15`
-* ****
+* **Output 7-segment Display**
+   * Two segment displays the contents of the Register for `RegWriteData` in hexadecimal. Additional output LEDs and displays are used for additional outputs.
 * ****
 ## Simulation and Testing
 ![Testbench Simulation](photos/Testbench%20Simulation.png)
