@@ -180,6 +180,32 @@ A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
    * Two segment displays the contents of the Register for `RegWriteData` in hexadecimal. Additional output LEDs and displays are used for additional outputs.
 ![Interface of Microprocessor Components](photos/Interface%20of%20Microprocessor%20Components.jpeg)
 ## Simulation and Testing
+* The following code shows part of the test bench  fixture code used to simulate and verify the Microprocessor. I temporarily readjusted `clock` to directly reflect the value of `oscillator` for convenience during the simulation.
+```verilog
+	initial begin
+		oscillator = 0;
+	end
+	always #10 oscillator = ~oscillator;
+	
+	initial begin
+		// Initialize Inputs
+		frequency_2 = 0;
+		frequency_4 = 0;
+		reset = 1;
+		// Wait 100 ns for global reset to finish
+        #15 reset = 0;
+		// lw $s2, 1($s0)
+		instruction  = {2'b01, 2'b00, 2'b10, 2'b01};
+   		// j + 1
+   		#20 instruction = {2'b11, 2'b00, 2'b00, 2'b01};
+   		// add $s0, $s1 $s2
+   		#20 instruction = {2'b00, 2'b01, 2'b10, 2'b00};
+   		// sw $s2, 1($s2)
+   		#20 instruction  = {2'b10, 2'b10, 2'b10, 2'b01};
+   		// lw $s3, 1($s0)
+   		#20 instruction = {2'b01, 2'b01, 2'b11, 2'b01};
+	end
+```
 ![Testbench Simulation](photos/Testbench%20Simulation.png)
 ![FPGA Implementation](/photos/FPGA%20Implementation.png)
 
