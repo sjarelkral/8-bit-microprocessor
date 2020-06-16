@@ -166,5 +166,15 @@ A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
 * **Registers** :
    * There are four 8-bit general purpose registers.
    * Every time `RegWrite` is asserted, the corresponding register and it's new value (`RegWriteData`) is displayed.
+* **Instruction Memory**
+   * Contains pre-defined instructions (defined in the ISA).
+   * Implemented on separate FPGA board and connected through two 8-bit buses.
+* **Control Unit**
+   * Send appropriate control signals depending on the 2-bit op code.
+* **ALU**
+   * Performs addition arithmetic.
+* **Data Memory**
+* ****
+* ****
 ## Simulation and Testing
 ![Testbench Simulation](photos/Testbench%20Simulation.png)
