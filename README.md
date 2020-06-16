@@ -193,7 +193,7 @@ A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
 		frequency_4 = 0;
 		reset = 1;
 		// Wait 100 ns for global reset to finish
-        #15 reset = 0;
+		#15 reset = 0;
 		// lw $s2, 1($s0)
 		instruction  = {2'b01, 2'b00, 2'b10, 2'b01};
    		// j + 1
@@ -206,6 +206,8 @@ A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
    		#20 instruction = {2'b01, 2'b01, 2'b11, 2'b01};
 	end
 ```
+* Simulation results.
 ![Testbench Simulation](photos/Testbench%20Simulation.png)
+* FPGA board implememtation results.
 ![FPGA Implementation](/photos/FPGA%20Implementation.png)
 
