@@ -29,8 +29,8 @@ A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
    * Value of `pc` i.e *next instruction to be executed*
    * Value of `MemRead`, `MemWrite`, `RegWrite`, `op` and `clock`
 ## Modules and Code Structure
-* **Microprocessor** : 
-   * The ALU, control unit, system memory, frequency divider, pc and registers are condensed into a behavioural description of `Microprocessor` module. This module is responsible for all the external inputs and output and forms the core part of the project. 
+* **Microprocessor** :
+   * The ALU, control unit, system memory, frequency divider, pc and registers are condensed into a behavioural description of `Microprocessor` module. This module is responsible for all the external inputs and output and forms the core part of the project.
    ``` verilog
    module Microprocessor(
     output clock,
@@ -84,15 +84,15 @@ A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
    * The main part of the sequential circuit description is an always block that is triggered by the positive edge of the `clock` and an asynchronous `reset` input .The latter asynchronously resets the registers, memory and the pc to their default values when asserted.
    ```verilog
    always @ (posedge clock or posedge reset) begin
-   
+
    if (reset) begin
    ... //Reinitialize memory, registers and pc
    end
-   
+
    else begin
    ...//Instruction execution, calculate new PC value and update of the output register
    end
-   
+
    end
    ```
    * The storage elements in the project are implemented using the `reg` type variable.
@@ -143,7 +143,7 @@ A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
    Console  pc_counter_low(pc_low, pc[3:0], 1'b0);
    Console reg_num_(reg_num, rw_num,reg_invalid);
    ```
-* **IMEM** : 
+* **IMEM** :
    * `IMEM` module is a write once read many times instruction memory. It gets an 8-bit instruction address and returns an 8-bit machine instruction code.
    ```verilog
    module IMEM(
@@ -153,9 +153,9 @@ A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
    ```
 ## Microprocessor Design
 ### Data Path
-![Microprocessor - Data path](photos/Data%20Path.JPG)
+![Microprocessor - Data path](./photos/Data%20Path.JPG)
 ### Instruction Set Architecture
-![Microprocessor - Instruction Set Architecture](/photos/ISA.JPG)
+![Microprocessor - Instruction Set Architecture](./photos/ISA.JPG)
 #### Formats of the entire instruction set
 #### Control Signals
 * Most of the control signals in the Microprocessor design were not explicitly implemented in the behavioral description model as they are automatically generated in the conditional blocks and in the use of appropriate variables.
@@ -178,7 +178,7 @@ A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
    * Initial values are: `[0]0, [1]1, ... , [15]15, [16]0, [17]-1, ... ,[31]-15`
 * **Output 7-segment Display**
    * Two segment displays the contents of the Register for `RegWriteData` in hexadecimal. Additional output LEDs and displays are used for additional outputs.
-![Interface of Microprocessor Components](photos/Interface%20of%20Microprocessor%20Components.jpeg)
+![Interface of Microprocessor Components](./photos/Interface%20of%20Microprocessor%20Components.jpeg)
 ## Simulation and Testing
 * The following code shows part of the test bench  fixture code used to simulate and verify the Microprocessor. I temporarily readjusted `clock` to directly reflect the value of `oscillator` for convenience during the simulation.
 ```verilog
@@ -186,7 +186,7 @@ A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
 		oscillator = 0;
 	end
 	always #10 oscillator = ~oscillator;
-	
+
 	initial begin
 		// Initialize Inputs
 		frequency_2 = 0;
@@ -207,7 +207,6 @@ A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
 	end
 ```
 * Simulation results.
-![Testbench Simulation](photos/Testbench%20Simulation.png)
+![Testbench Simulation](./photos/Testbench%20Simulation.png)
 * FPGA board implememtation results.
-![FPGA Implementation](/photos/FPGA%20Implementation.png)
-
+![FPGA Implementation](./photos/FPGA%20Implementation.png)
