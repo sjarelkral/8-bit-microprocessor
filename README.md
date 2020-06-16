@@ -167,4 +167,4 @@ A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
    * There are four 8-bit general purpose registers.
    * Every time `RegWrite` is asserted, the corresponding register and it's new value (`RegWriteData`) is displayed.
 ## Simulation and Testing
-![Testbench Simulation](https://github.com/sjarelkral/Microprocessor/blob/master/photos/Testbench%20Simulation.png)
+![Testbench Simulation](photos/Testbench%20Simulation.png)
