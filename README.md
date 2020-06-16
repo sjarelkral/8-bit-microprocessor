@@ -174,6 +174,8 @@ A Verilog implementation of a Simple Microprocessor programmed on an FPGA board.
 * **ALU**
    * Performs addition arithmetic.
 * **Data Memory**
+   * 8-bit address i.e 256 adress locations but only 32 address locations are used.
+   * Initial values are: `[0]0, [1]1, ... , [15]15, [16]0, [17]-1, ... ,[31]-15`
 * ****
 * ****
 ## Simulation and Testing
