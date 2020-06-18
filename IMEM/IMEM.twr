@@ -43,57 +43,43 @@ Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-Read_Address<0>|instruction<0> |    8.472|
-Read_Address<0>|instruction<1> |    8.405|
-Read_Address<0>|instruction<2> |    8.313|
-Read_Address<0>|instruction<3> |    9.135|
-Read_Address<0>|instruction<4> |    7.255|
-Read_Address<0>|instruction<5> |    8.883|
-Read_Address<0>|instruction<6> |    7.906|
-Read_Address<0>|instruction<7> |    9.292|
-Read_Address<1>|instruction<0> |    7.681|
-Read_Address<1>|instruction<1> |    7.823|
-Read_Address<1>|instruction<2> |    7.540|
-Read_Address<1>|instruction<3> |    7.786|
-Read_Address<1>|instruction<4> |    7.510|
-Read_Address<1>|instruction<5> |    8.149|
-Read_Address<1>|instruction<6> |    8.054|
-Read_Address<1>|instruction<7> |    8.519|
-Read_Address<2>|instruction<0> |    7.510|
-Read_Address<2>|instruction<1> |    7.021|
-Read_Address<2>|instruction<2> |    7.577|
-Read_Address<2>|instruction<3> |    7.844|
-Read_Address<2>|instruction<4> |    7.705|
-Read_Address<2>|instruction<5> |    7.350|
-Read_Address<2>|instruction<6> |    8.478|
-Read_Address<2>|instruction<7> |    7.759|
-Read_Address<3>|instruction<0> |    7.588|
-Read_Address<3>|instruction<1> |    7.169|
-Read_Address<3>|instruction<2> |    7.581|
-Read_Address<3>|instruction<3> |    7.899|
-Read_Address<3>|instruction<4> |    7.827|
-Read_Address<3>|instruction<5> |    7.593|
-Read_Address<3>|instruction<6> |    8.687|
-Read_Address<3>|instruction<7> |    7.831|
-Read_Address<4>|instruction<0> |    7.371|
-Read_Address<4>|instruction<1> |    7.089|
-Read_Address<4>|instruction<2> |    7.266|
-Read_Address<4>|instruction<3> |    8.337|
-Read_Address<4>|instruction<4> |    7.446|
-Read_Address<4>|instruction<5> |    7.810|
-Read_Address<4>|instruction<6> |    7.631|
-Read_Address<4>|instruction<7> |    7.816|
+Read_Address<0>|instruction<0> |    7.518|
+Read_Address<0>|instruction<1> |    7.515|
+Read_Address<0>|instruction<3> |    7.336|
+Read_Address<0>|instruction<5> |    7.350|
+Read_Address<0>|instruction<6> |    7.331|
+Read_Address<0>|instruction<7> |    7.759|
+Read_Address<1>|instruction<0> |    7.381|
+Read_Address<1>|instruction<1> |    7.283|
+Read_Address<1>|instruction<4> |    7.116|
+Read_Address<1>|instruction<5> |    7.082|
+Read_Address<1>|instruction<6> |    7.159|
+Read_Address<1>|instruction<7> |    7.491|
+Read_Address<2>|instruction<0> |    8.321|
+Read_Address<2>|instruction<1> |    8.321|
+Read_Address<2>|instruction<3> |    8.142|
+Read_Address<2>|instruction<4> |    6.955|
+Read_Address<2>|instruction<5> |    8.139|
+Read_Address<2>|instruction<6> |    8.096|
+Read_Address<2>|instruction<7> |    8.548|
+Read_Address<3>|instruction<0> |    7.379|
+Read_Address<3>|instruction<1> |    7.227|
+Read_Address<3>|instruction<3> |    7.048|
+Read_Address<3>|instruction<4> |    7.114|
+Read_Address<3>|instruction<5> |    7.048|
+Read_Address<3>|instruction<6> |    7.188|
+Read_Address<3>|instruction<7> |    7.457|
 ---------------+---------------+---------+
 
 
-Analysis completed Thu Jun 18 14:30:03 2020 
+Analysis completed Thu Jun 18 14:49:26 2020 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 346 MB
+Peak Memory Usage: 347 MB
 
 
 

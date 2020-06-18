@@ -71,7 +71,7 @@ Automatic Register Balancing       : No
 
 ---- Target Options
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 500
+Global Maximum Fanout              : 100000
 Add Generic Clock Buffer(BUFG)     : 24
 Register Duplication               : YES
 Slice Packing                      : YES
@@ -151,6 +151,7 @@ WARNING:Xst:646 - Signal <rw_num<4>> is assigned but never used. This unconnecte
 WARNING:Xst:1780 - Signal <delay_4> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <delay_2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Register <reg_invalid> equivalent to <data_invalid> has been removed
+    Found 4x1-bit ROM for signal <data_invalid$mux0000>.
     Found 1-bit register for signal <data_invalid>.
     Found 26-bit up counter for signal <delay>.
     Found 8-bit 4-to-1 multiplexer for signal <display_bus>.
@@ -165,6 +166,7 @@ WARNING:Xst:1780 - Signal <delay_2> is never used or assigned. This unconnected 
     Found 1-bit register for signal <two_sec>.
 INFO:Xst:738 - HDL ADVISOR - 256 flip-flops were inferred for signal <memory>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
     Summary:
+	inferred   1 ROM(s).
 	inferred   1 Counter(s).
 	inferred  75 D-type flip-flop(s).
 	inferred   3 Adder/Subtractor(s).
@@ -177,6 +179,8 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 HDL Synthesis Report
 
 Macro Statistics
+# ROMs                                                 : 1
+ 4x1-bit ROM                                           : 1
 # Adders/Subtractors                                   : 3
  8-bit adder                                           : 2
  8-bit adder carry in                                  : 1
@@ -210,6 +214,8 @@ WARNING:Xst:2677 - Node <rw_num_4> of sequential type is unconnected in block <M
 Advanced HDL Synthesis Report
 
 Macro Statistics
+# ROMs                                                 : 1
+ 4x1-bit ROM                                           : 1
 # Adders/Subtractors                                   : 2
  5-bit adder                                           : 1
  8-bit adder                                           : 1
@@ -293,8 +299,8 @@ Cell Usage :
 #      VCC                         : 1
 #      XORCY                       : 42
 # FlipFlops/Latches                : 332
-#      FDC                         : 40
-#      FDCE                        : 132
+#      FDC                         : 32
+#      FDCE                        : 140
 #      FDE                         : 7
 #      FDP                         : 1
 #      FDPE                        : 124
@@ -342,7 +348,7 @@ Clock Information:
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
 oscillator                         | BUFGP                  | 27    |
-clock_OBUF1(clock_f5:O)            | BUFG(*)(data_invalid)  | 303   |
+clock_OBUF1(clock_f5:O)            | BUFG(*)(registers_0_0) | 303   |
 sec                                | NONE(two_sec)          | 1     |
 two_sec                            | NONE(four_sec)         | 1     |
 -----------------------------------+------------------------+-------+
@@ -603,12 +609,12 @@ Delay:               6.878ns (Levels of Logic = 4)
 
 
 Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.28 secs
+Total CPU time to Xst completion: 4.14 secs
  
 --> 
 
 
-Total memory usage is 514180 kilobytes
+Total memory usage is 514452 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   10 (   0 filtered)

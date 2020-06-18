@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="par" timeStamp="Thu Jun 18 14:30:00 2020">
+  <application stringID="par" timeStamp="Thu Jun 18 14:49:23 2020">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -53,7 +53,7 @@
         <column stringID="speed"/>
         <row stringID="row" value="0">
           <item stringID="arch" value="Intel(R) Core(TM) i7-4790 CPU @ 3.60GHz"/>
-          <item stringID="speed" value="2365.597 MHz"/>
+          <item stringID="speed" value="3671.934 MHz"/>
         </row>
       </table>
     </section>
@@ -67,7 +67,7 @@
     </task>
     <task stringID="PAR_DEVICE_UTILIZATION">
       <section stringID="PAR_DESIGN_SUMMARY">
-        <item AVAILABLE="704" dataType="int" stringID="PAR_SLICES" value="8"></item>
+        <item AVAILABLE="704" dataType="int" stringID="PAR_SLICES" value="4"></item>
       </section>
     </task>
     <task stringID="PAR_PAR">
@@ -1145,7 +1145,7 @@
       <section stringID="PAR_UNROUTES_REPORT">
         <item dataType="int" stringID="PAR_UNROUTED_NETS" value="0"/>
         <item dataType="int" stringID="PAR_TOTAL_SOURCELESS_NETS" value="0"/>
-        <item dataType="int" stringID="PAR_TOTAL_LOADLESS_NETS" value="3"/>
+        <item dataType="int" stringID="PAR_TOTAL_LOADLESS_NETS" value="4"/>
       </section>
     </task>
   </application>

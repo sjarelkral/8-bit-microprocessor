@@ -71,7 +71,7 @@ Automatic Register Balancing       : No
 
 ---- Target Options
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 500
+Global Maximum Fanout              : 100000
 Add Generic Clock Buffer(BUFG)     : 24
 Register Duplication               : YES
 Slice Packing                      : YES
@@ -135,10 +135,8 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <IMEM>.
     Related source file is "IMEM.v".
-WARNING:Xst:647 - Input <Read_Address<7:5>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:653 - Signal <MemByte<25>> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
-WARNING:Xst:653 - Signal <MemByte<5>> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
-    Found 32x8-bit ROM for signal <instruction>.
+WARNING:Xst:647 - Input <Read_Address<7:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 9x8-bit ROM for signal <instruction>.
     Summary:
 	inferred   1 ROM(s).
 Unit <IMEM> synthesized.
@@ -149,7 +147,7 @@ HDL Synthesis Report
 
 Macro Statistics
 # ROMs                                                 : 1
- 32x8-bit ROM                                          : 1
+ 9x8-bit ROM                                           : 1
 
 =========================================================================
 
@@ -163,7 +161,7 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # ROMs                                                 : 1
- 32x8-bit ROM                                          : 1
+ 9x8-bit ROM                                           : 1
 
 =========================================================================
 
@@ -175,7 +173,7 @@ Optimizing unit <IMEM> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block IMEM, actual ratio is 1.
+Found area constraint ratio of 100 (+ 5) on block IMEM, actual ratio is 0.
 
 Final Macro Processing ...
 
@@ -210,13 +208,12 @@ Design Statistics
 # IOs                              : 16
 
 Cell Usage :
-# BELS                             : 24
+# BELS                             : 8
 #      GND                         : 1
-#      LUT3                        : 1
-#      LUT4                        : 14
-#      MUXF5                       : 8
-# IO Buffers                       : 13
-#      IBUF                        : 5
+#      LUT3                        : 2
+#      LUT4                        : 5
+# IO Buffers                       : 12
+#      IBUF                        : 4
 #      OBUF                        : 8
 =========================================================================
 
@@ -225,10 +222,10 @@ Device utilization summary:
 
 Selected Device : 3s50antqg144-5 
 
- Number of Slices:                        8  out of    704     1%  
- Number of 4 input LUTs:                 15  out of   1408     1%  
+ Number of Slices:                        4  out of    704     0%  
+ Number of 4 input LUTs:                  7  out of   1408     0%  
  Number of IOs:                          16
- Number of bonded IOBs:                  13  out of    108    12%  
+ Number of bonded IOBs:                  12  out of    108    11%  
 
 ---------------------------
 Partition Resource Summary:
@@ -261,7 +258,7 @@ Speed Grade: -5
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 7.325ns
+   Maximum combinational path delay: 6.848ns
 
 Timing Detail:
 --------------
@@ -269,36 +266,35 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 67 / 8
+  Total number of paths / destination ports: 26 / 7
 -------------------------------------------------------------------------
-Delay:               7.325ns (Levels of Logic = 4)
-  Source:            Read_Address<0> (PAD)
-  Destination:       instruction<7> (PAD)
+Delay:               6.848ns (Levels of Logic = 3)
+  Source:            Read_Address<2> (PAD)
+  Destination:       instruction<5> (PAD)
 
-  Data Path: Read_Address<0> to instruction<7>
+  Data Path: Read_Address<2> to instruction<5>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            14   0.824   0.958  Read_Address_0_IBUF (Read_Address_0_IBUF)
-     LUT4:I0->O            1   0.561   0.000  Mrom_instruction3_G (N41)
-     MUXF5:I1->O           1   0.229   0.357  Mrom_instruction3 (instruction_3_OBUF)
-     OBUF:I->O                 4.396          instruction_3_OBUF (instruction<3>)
+     IBUF:I->O             7   0.824   0.710  Read_Address_2_IBUF (Read_Address_2_IBUF)
+     LUT4:I0->O            1   0.561   0.357  Mrom_instruction51 (instruction_5_OBUF)
+     OBUF:I->O                 4.396          instruction_5_OBUF (instruction<5>)
     ----------------------------------------
-    Total                      7.325ns (6.010ns logic, 1.315ns route)
-                                       (82.0% logic, 18.0% route)
+    Total                      6.848ns (5.781ns logic, 1.067ns route)
+                                       (84.4% logic, 15.6% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 2.00 secs
-Total CPU time to Xst completion: 2.49 secs
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 2.47 secs
  
 --> 
 
 
-Total memory usage is 500684 kilobytes
+Total memory usage is 500628 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    3 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 

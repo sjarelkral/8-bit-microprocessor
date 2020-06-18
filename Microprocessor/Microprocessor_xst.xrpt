@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Thu Jun 18 14:10:52 2020">
+  <application stringID="Xst" timeStamp="Thu Jun 18 15:06:28 2020">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -53,7 +53,7 @@
         <column stringID="speed"/>
         <row stringID="row" value="0">
           <item stringID="arch" value="Intel(R) Core(TM) i7-4790 CPU @ 3.60GHz"/>
-          <item stringID="speed" value="3171.588 MHz"/>
+          <item stringID="speed" value="2941.426 MHz"/>
         </row>
       </table>
     </section>
@@ -100,7 +100,7 @@
       <item DEFAULT="NO" label="-async_to_sync" stringID="XST_ASYNCTOSYNC" value="NO"/>
       <item DEFAULT="AUTO" label="-mult_style" stringID="XST_MULTSTYLE" value="Auto"/>
       <item DEFAULT="YES" label="-iobuf" stringID="XST_IOBUF" value="YES"/>
-      <item DEFAULT="500" label="-max_fanout" stringID="XST_MAXFANOUT" value="500"/>
+      <item DEFAULT="500" label="-max_fanout" stringID="XST_MAXFANOUT" value="100000"/>
       <item DEFAULT="24" label="-bufg" stringID="XST_BUFG" value="24"/>
       <item DEFAULT="YES" label="-register_duplication" stringID="XST_REGISTERDUPLICATION" value="YES"/>
       <item DEFAULT="NO" label="-register_balancing" stringID="XST_REGISTERBALANCING" value="No"/>
@@ -114,6 +114,7 @@
       <item DEFAULT="0%" label="-slice_utilization_ratio_maxmargin" stringID="XST_SLICEUTILIZATIONRATIOMAXMARGIN" value="5"/>
     </section>
     <section stringID="XST_HDL_SYNTHESIS_REPORT">
+      <item dataType="int" stringID="XST_ROMS" value="1"></item>
       <item dataType="int" stringID="XST_ADDERSSUBTRACTORS" value="3">
         <item dataType="int" stringID="XST_8BIT_ADDER" value="2"/>
       </item>
@@ -129,6 +130,7 @@
       </item>
     </section>
     <section stringID="XST_ADVANCED_HDL_SYNTHESIS_REPORT">
+      <item dataType="int" stringID="XST_ROMS" value="1"></item>
       <item dataType="int" stringID="XST_ADDERSSUBTRACTORS" value="2">
         <item dataType="int" stringID="XST_8BIT_ADDER" value="1"/>
       </item>
@@ -182,8 +184,8 @@
           <item dataType="int" stringID="XST_XORCY" value="42"/>
         </item>
         <item dataType="int" stringID="XST_FLIPFLOPSLATCHES" value="332">
-          <item dataType="int" stringID="XST_FDC" value="40"/>
-          <item dataType="int" stringID="XST_FDCE" value="132"/>
+          <item dataType="int" stringID="XST_FDC" value="32"/>
+          <item dataType="int" stringID="XST_FDCE" value="140"/>
           <item dataType="int" stringID="XST_FDE" value="7"/>
           <item dataType="int" stringID="XST_FDP" value="1"/>
           <item dataType="int" stringID="XST_FDPE" value="124"/>
