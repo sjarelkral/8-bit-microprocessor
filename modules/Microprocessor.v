@@ -154,47 +154,47 @@ module Microprocessor(
 
   else begin
 
-      op_out <= instruction[7:6];
-      //Increment PC
-      pc <= pc+1;
+			op_out <= instruction[7:6];
 
-      //Default for RegWriteData display
+			//Default for RegWriteData display
 		  data_invalid <= 1'b0;
 		  reg_invalid <= 1'b0;
 
 
 		  //Add instruction
         if (instruction[7:6] == 2'b00) begin
+					pc <= pc+1;
 			     rw_num <= instruction[1:0];
-           registers[instruction[1:0]] <= registers[instruction[3:2]] +
+				registers[instruction[1:0]] <= registers[instruction[3:2]] +
                                 registers[instruction[5:4]];
         end
 
         //Load instruction
         else if (instruction[7:6] == 2'b01) begin
+					pc <= pc+1;
 			     rw_num <= instruction[3:2];
-           registers[instruction[3:2]] <= memory[registers[instruction[5:4]]+immediate];
+					registers[instruction[3:2]] <= memory[registers[instruction[5:4]]+immediate];
         end
 
         //Store instruction
         else if (instruction[7:6] == 2'b10) begin
-
-          //RegWriteData irrelevant
+				pc <= pc+1;
+				//RegWriteData irrelevant
 			     data_invalid <= 1'b1;
 			     reg_invalid <= 1'b1;
 
-           //instruction body
+				//instruction body
 			     memory[registers[instruction[5:4]]+immediate] <= registers[instruction[3:2]];
         end
 
         //Jump instruction
-        else begin
+        else if (instruction[7:6] == 2'b11) begin
 
-          //RegWriteData irrelevant
+				//RegWriteData irrelevant
 			     data_invalid <= 1'b1;
 			     reg_invalid <= 1'b1;
 
-           //instruction body
+				//instruction body
 			     pc <= pc + immediate+1;
 		    end
       end
